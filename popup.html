@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>智游啦订单录入登录</title>
+        <link rel="stylesheet" href="style/popup.css">
+    </head>
+    <body>
+        <div class="popup-wrapper">
+            <div class="popup-login">
+                <h3 class="options-logo"></h3>
+                <div class="options-content">
+                    <input class="options-account" id="account" placeholder="账号" type="text">
+                    <input class="options-password" id="password" placeholder="密码" type="password">
+                    <button class="options-btn" id="login">确认</button>
+                </div>
+            </div>
+            <div class="popup-list"  style="display: none;">
+                <header class="popup-header">
+                    <button class="popup-header_left"></button>
+                    <h2 class="popup-header_title">入库列表 | <b class="popup-header_date"></b></h2>
+                    <button class="popup-header_right"></button>
+                </header>
+                <section class="popup-content">
+                </section>
+                <div class="d-loading">
+                </div>
+                <footer class="popup-footer">
+                    <button class="popup-footer_btn">一键入库</button>
+                </footer>
+            </div>
+        </div>
+    </body>
+    <script src="js/zing.js"></script>
+    <script src="js/popup.js"></script>
+</html>

@@ -1,0 +1,36 @@
+{
+    "manifest_version": 2,
+    "name": "智游啦录单plugin",
+    "version": "1.0",
+    "description": "录单啦～",
+    "icons": {
+        "16": "images/icon.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "page_action": {
+        "default_icon": {
+            "19": "images/icon.png",
+            "38": "images/icon.png"
+        },
+        "default_title": "智游啦入库",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "*://trade.taobao.com/*",
+        "tabs",
+        "activeTab",
+        "notifications",
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["*://trade.taobao.com/*"],
+            "js": ["js/zing.js", "js/taobao.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "background": {
+        "scripts": ["js/background.js"]
+    }
+}

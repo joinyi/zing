@@ -1,0 +1,225 @@
+*, html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #eceff1;
+}
+button {
+    border: none;
+    background: transparent;
+    outline: none;
+}
+b , h2, h3, h4, i{
+    font-weight: normal;
+    font-style: normal;
+}
+.popup-wrapper {
+    padding: 0;
+    width: 360px;
+    height: 500px;
+}
+
+.popup-header {
+    display: flex;
+    height: 36px;
+    line-height: 36px;
+    color: #333;
+    padding: 0 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #ececec;
+}
+
+.popup-header_title, .popup-header_left, .popup-header_right {
+    display: inline-block;
+}
+.popup-header_title {
+    width: 240px;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    color: #666;
+}
+.popup-header_left, .popup-header_right {
+    width: 50px;
+    height: 100%;
+    display: inline-block;
+    text-align: left;
+    background-repeat: no-repeat;
+    background-size: 8px;
+}
+.popup-header_left {
+    background-image: url('../images/arrow_left.png');
+    background-position: left center;
+}
+.popup-header_right {
+    background-image: url('../images/arrow_right.png');
+    background-position: right center;
+}
+.popup-content {
+    height: 477px;
+    overflow: auto;
+}
+.popup-content_indit {
+    text-align: center;
+    padding: 20px 0;
+    color: #999;
+    font-size: 13px;
+}
+.popup-content_item {
+    position: relative;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-left: 2px solid #ff8a34;
+    margin: 10px;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,.1);
+}
+.popup-content_item__indit {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    padding: 3px 5px;
+    color: #fff;
+    background-color: #999;
+}
+.popup-content_item__name > b{
+    color: #ff8a34;
+}
+.popup-content_item > div {
+    line-height: 20px;
+}
+.popup-content_item span {
+    display: inline-block;
+    text-align: right;
+    width: 64px;
+    color: #999;
+}
+.popup-content_item content {
+    width: 254px;
+    display: inline-flex;
+    color: #666;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.popup-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    border-top: 1px solid #ececec;
+    background-color: #fff;
+}
+.popup-footer_btn {
+    width: 100%;
+    line-height: 45px;
+    font-size: 14px;
+    color: #ff8a34;
+}
+button:hover {
+    cursor: pointer;
+}
+/**
+ 登录样式
+*/
+.options-logo {
+    width: 112px;
+    height: 136px;
+    margin: 60 auto;
+    background-size: cover;
+    background-image: url('../images/z-lab-logo@2x.png');
+}
+
+.options-content {
+    margin: 0 auto;
+    width: 300px;
+}
+
+.options-account, .options-password, .options-btn {
+    display: block;
+    width: 100%;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.options-account, .options-password {
+    padding: 4px 6px;
+    border: solid 1px #e5e5e5;
+}
+
+.options-btn {
+    border: 0;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 20px;
+}
+/* loading */
+.d-loading {
+    /*position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 10000;*/
+}
+.d-circle {
+    position: absolute;
+    top: 50%;
+    transform: translate3D(0, -50%, 0);
+    width: 32px;
+    text-align: center;
+    left: 50%;
+    background-color: rgba(0, 0, 0, .72);
+    height: 32px;
+    line-height: 50px;
+    border-radius: 5px;
+    margin-top: -32px;
+    margin-left: -32px;
+    padding: 16px;
+}
+.d-circle_round {
+    width: 32px;
+    height: 32px;
+    animation: loading-rotate 2s linear infinite;
+}
+.d-circle_path {
+    stroke-dasharray: 90,150;
+    stroke-dashoffset: 0;
+    stroke-width: 2;
+    stroke: #ff9d42;
+    stroke-linecap: round;
+    animation: loading-dash 1.5s ease-in-out infinite;
+}
+.d-circle_text {
+    margin-top: 10px;
+    color: #ff9d42;
+}
+@keyframes loading-rotate {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes loading-dash { 
+    0% {
+        stroke-dasharray:1,200;stroke-dashoffset:0
+    }
+    50% {
+        stroke-dasharray: 90,150;
+        stroke-dashoffset: -40px;
+    } to {
+        stroke-dasharray: 90,150;
+        stroke-dashoffset:-120px
+    }
+}
